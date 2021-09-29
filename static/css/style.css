@@ -1,0 +1,9 @@
+.lead{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 10px;
+    background-color: gray;
+    width: 100%;
+}
