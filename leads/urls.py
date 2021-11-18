@@ -1,6 +1,6 @@
 from django.urls import path
 # from .views import (lead_create, lead_list, lead_delete, lead_details, lead_update)
-from .views import (LeadListView, LeadDetailsView, LeadCreateView, LeadUpdateView, LeadDeleteView)
+from .views import (AssignAgentView, LeadListView, LeadDetailsView, LeadCreateView, LeadUpdateView, LeadDeleteView)
 
 #urls of function based view
 # urlpatterns = [
@@ -16,6 +16,7 @@ urlpatterns = [
     path('', LeadListView.as_view(), name="lead_list"),
     path('<int:pk>/', LeadDetailsView.as_view(), name="lead_details"),
     path('<int:pk>/update/',LeadUpdateView.as_view(), name="lead_update"),
-    path('create/', LeadCreateView.as_view(), name="lead_create"),
     path('<int:pk>/delete/', LeadDeleteView.as_view(), name="lead_delete"),
+    path('<int:pk>/assign_agent/', AssignAgentView.as_view(), name="assign_agent"),
+    path('create/', LeadCreateView.as_view(), name="lead_create"),
 ]
